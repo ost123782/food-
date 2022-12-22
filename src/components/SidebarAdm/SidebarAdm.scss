@@ -1,0 +1,42 @@
+.main__sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 150px;
+    height: 100%;
+    background-color: yellow;
+    overflow-y: 20;
+    text-align: center;
+    transition: all 1s ease;
+
+    .sidebar__nav {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .sidebar__list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px 0;
+
+            .list__item {
+                border: 1px solid rgb(58, 58, 58);
+                list-style-type: none;
+            }
+        }
+    }
+
+    .sidebar__close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+    }
+}
+
+.active {
+    left: 0;
+}
