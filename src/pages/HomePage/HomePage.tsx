@@ -30,9 +30,9 @@ const HomePage = () => {
                 <div className="main-popular">
                     <h1>Популярне зараз</h1>
                     <div className="main-cards">
+                        {/* <ProductCard />
                         <ProductCard />
-                        <ProductCard />
-                        <ProductCard />
+                        <ProductCard /> */}
                     </div>
                 </div>
             </main>

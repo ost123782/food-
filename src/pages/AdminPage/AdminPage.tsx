@@ -4,10 +4,13 @@ import './AdminPage.scss'
 
 const AdminPage : React.FC = () => {
   return (
-    <main className="main">
+    <div className="container">
         <Header />
+        <main className="main">
+            <h1>Welcome to Admin Page!</h1>
+        </main>
         <SidebarAdm />
-    </main>
+    </div>
   )
 }
 

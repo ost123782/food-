@@ -1,20 +1,20 @@
+import getProducts from '../../store/getProducts';
 import Header from "../../components/Header/Header"
 import ProductCard from "../../components/ProductCard/ProductCard"
 import Footer from "../../components/Footer/Footer"
 import './ProductPage.scss'
 import PopupMain from "../../components/PopupMain/PopupMain";
 
+getProducts.setFetchedProducts()
+
 const ProductPage = () => {
+
   return (
     <div className="container">
          <Header />
         <main className="main">
             <div className="main-cards">
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+            {getProducts.fetchedProducts.map(prod => {return <ProductCard key={prod.imageURL} name={prod.name} price={prod.price} imageURL={prod.imageURL} productID={prod.productID}/>})}
             </div>
         </main>
         <Footer />
