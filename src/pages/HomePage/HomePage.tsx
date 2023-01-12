@@ -2,7 +2,6 @@ import './HomePage.scss'
 import adImg from '../../assets/png-transparent-organic-food-vegetable-fruit-mediterranean-cuisine-raizes-natural-foods-leaf-vegetable-kitchen.png'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
-import ProductCard from '../../components/ProductCard/ProductCard'
 import PopupMain from '../../components/PopupMain/PopupMain'
 
 const HomePage = () => {

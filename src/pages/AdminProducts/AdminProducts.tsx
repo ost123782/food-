@@ -5,10 +5,15 @@ import SidebarAdm from "../../components/SidebarAdm/SidebarAdm";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import getProducts from '../../store/getProducts';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
-getProducts.setFetchedProducts()
 
 const AdminProducts : React.FC = observer(() => {
+
+    useEffect(() => {
+        getProducts.setFetchedProducts()
+    }, [])
+
     return (
         
         <div className="container">

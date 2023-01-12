@@ -11,6 +11,7 @@ const SidebarAdm = observer(() => {
                 <p className="sidebar__close" onClick={() => sidebar.setOpen(false)} >X</p>
                 <li className='list__item'><Link to={'/admin'}>Admin</Link></li>
                 <li className='list__item'><Link to={'/admin/products'}>Products</Link></li>
+                <li className='list__item'><Link to={'/admin/calls'}>Calls</Link></li>
                 <li className='list__item'>Orders</li>
             </ul>
         </nav>

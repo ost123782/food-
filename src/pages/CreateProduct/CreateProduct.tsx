@@ -1,5 +1,6 @@
 import axios from "axios"
 import React, { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import Header from "../../components/Header/Header"
 import SidebarAdm from "../../components/SidebarAdm/SidebarAdm"
 import './CreateProduct.scss'
@@ -10,6 +11,7 @@ interface Image {
 }
 
 const CreateProduct = () => {
+  const navigate = useNavigate()
   const [image, setImage] = useState<Image>({} as Image)
   const previewImg = (ev: any) => {
     setImage(img =>
@@ -47,7 +49,7 @@ const CreateProduct = () => {
     .catch(() => {alert('Щось пішло не так...'); return})
 
     await axios.post('http://localhost:5000/products/create', Object.fromEntries(data))
-    .then(res => console.log(res.data))
+    .then(() => navigate('/admin/products'))
     .catch(() => {alert('Щось пішло не так...'); return})
 
   }

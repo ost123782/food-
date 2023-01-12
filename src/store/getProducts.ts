@@ -16,11 +16,14 @@ class GetProducts {
         makeAutoObservable(this)
     }
 
-    getFetchedProducts () {
-        return this.fetchedProducts
-    }
-
-    setFetchedProducts = async () => {
+    setFetchedProducts = async (id?: number | string | undefined) => {
+        if (id) {
+            const response = await axios.get(`http://localhost:5000/products`, {params : {productID: id}})
+            return runInAction(() => {
+                this.fetchedProducts = response.data
+            })
+            
+        }
         const response = await axios.get('http://localhost:5000/products/')
         runInAction(() => {
             this.fetchedProducts = response.data

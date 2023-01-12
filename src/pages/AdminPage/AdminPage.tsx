@@ -8,6 +8,7 @@ const AdminPage : React.FC = () => {
         <Header />
         <main className="main">
             <h1>Welcome to Admin Page!</h1>
+            <p>Lorem ispum</p>
         </main>
         <SidebarAdm />
     </div>
